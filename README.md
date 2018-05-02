@@ -1,10 +1,10 @@
-#SSLPinning
+# SSLPinning
 
 HttpURLConnection透過憑證綁定方式作連線，在這是綁定[Github](https://github.com)的憑證，當使用Proxy(Ex. [Charles](https://www.charlesproxy.com/))攔截傳輸內容時會無法正常連線。
 
-##Network Security Config
+## Network Security Config
 Android API 24以後才有的機制，利用```script/cert.sh```取得網站公鑰。
-```
+```bash
 root@debian:~# ./script/cert.sh github.com
 /businessCategory=Private Organization/1.3.6.1.4.1.311.60.2.1.3=US/1.3.6.1.4.1.311.60.2.1.2=Delaware/serialNumber=5157550/street=88 Colin P Kelly, Jr Street/postalCode=94107/C=US/ST=California/L=San Francisco/O=GitHub, Inc./CN=github.com
 pL1+qb9HTMRZJmuC/bB/ZI9d302BYrrqiVuRyW+DGrU=
